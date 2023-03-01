@@ -5,14 +5,17 @@ export default function TextForm(props) {
     console.log("Uppercase was clicked");
     let upper = title.toUpperCase();
     setTitle(upper);
+    props.showAlert("Converted to upper case", "success");
   };
   const handleClearClick = () => {
     let title = "";
     setTitle(title);
+    props.showAlert("Text is cleared", "success");
   };
   const handleLowClick = () => {
     let lower = title.toLowerCase();
     setTitle(lower);
+    props.showAlert("Converted to Lower case", "success");
   };
   const handleOnChange = (event) => {
     console.log("Onchange");
@@ -24,11 +27,13 @@ export default function TextForm(props) {
     var text = document.getElementById("myBox");
     text.select();
     navigator.clipboard.writeText(text.value);
+    props.showAlert("Text copied", "success");
   };
   const handleExtraSpaces = () => {
     let newText = title.split(/[ ]+/);
     //this regex will remove spaces >1 and form an array which will later be joined by " "
     setTitle(newText.join(" "));
+    props.showAlert("Extra spaces trimmed", "success");
   };
   const [title, setTitle] = useState("");
   return (
