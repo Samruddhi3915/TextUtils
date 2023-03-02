@@ -2,8 +2,10 @@ import "./App.css";
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-// import About from "./components/About";
+import About from "./components/About";
 import AlertReact from "./components/AlertReact";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 function App() {
   const [mode, setMode] = useState("light");
   const [alert, setAlert] = useState(null);
@@ -39,13 +41,22 @@ function App() {
       ></Navbar>
       <AlertReact alert={alert} />
       <div className="container my-3">
-        <TextForm
-          showAlert={showAlert}
-          heading="Enter the text to analyze below"
-          mode={mode}
-        ></TextForm>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/about" element={<About />} />
 
-        {/* <About></About> */}
+            <Route
+              path="/"
+              element={
+                <TextForm
+                  showAlert={showAlert}
+                  heading="Enter the text to analyze below"
+                  mode={mode}
+                />
+              }
+            />
+          </Routes>
+        </BrowserRouter>
       </div>
     </>
   );
