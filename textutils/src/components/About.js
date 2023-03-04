@@ -26,11 +26,12 @@ export default function About() {
   };
   return (
     <>
-      <div classNameName="container" style={myStyle}>
-        <h1 classNameName="my-3">About Us</h1>
+      <div className="container" style={myStyle}>
+        <h1 className="my-3">About Us</h1>
         <div className="accordion" id="accordionExample">
           {/* <div className="accordion-item">
-            <h2 classNameName="accordion-header" id="headingOne">
+            <h2 className
+            ="accordion-header" id="headingOne">
               <button
                 className="accordion-button"
                 style={myStyle}
@@ -162,15 +163,17 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div classNameName="container my-3">
+        <br />
+        <br />
+        {/* <div className="container my-3">
           <button
             type="button"
             onClick={toggleStyle}
-            classNameName="btn btn-primary my-3"
+            className="btn btn-primary my-3"
           >
             {btnTxt}
           </button>
-        </div>
+        </div> */}
       </div>
     </>
   );
