@@ -23,11 +23,8 @@ export default function TextForm(props) {
   };
 
   const handleCopy = () => {
-    console.log("Text copied");
-    var text = document.getElementById("myBox");
-    text.select();
-    navigator.clipboard.writeText(text.value);
-    document.getSelection().removeAllRanges();
+    navigator.clipboard.writeText(title);
+
     props.showAlert("Text copied", "success");
   };
   const handleExtraSpaces = () => {
@@ -102,7 +99,8 @@ export default function TextForm(props) {
         <p>
           {
             //will remove all "" and will have 0 words at initial stage of react application
-            title.split(" ").filter((element) => {
+            // split with space and newline to take all possible words
+            title.split(/\s+/).filter((element) => {
               return element.length !== 0;
             }).length
           }{" "}
