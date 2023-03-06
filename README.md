@@ -32,12 +32,5 @@ Snapshots:
 <img width="921" alt="Screenshot 2023-03-06 at 11 42 07 AM" src="https://user-images.githubusercontent.com/84762358/223032632-eefa219d-2fc3-48a5-886a-b843c7e3fe5c.png">
 <br>
 <br>
-
-
-
-
-
-
-
 You can visit Textutils on Github Pages with the given link:
-https://github.com/Samruddhi3915/TextUtils.git
+https://samruddhi3915.github.io/TextUtils/
